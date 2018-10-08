@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title th:text="${review.presName}">President Name</title>
+</head>
+<body>
+	<header>
+		<h1 th:text="${review.presName}">President Name</h1>
+		<ul>
+			<li><a href="/reviews">Reviews</a></li>
+		</ul>
+	</header>
+	<main>
+		<figure>
+			<img th:src="${review.imageURL}" style="width: auto; height: 1000px" th:alt="${review.presName}">
+			<figcaption th:text="review.termYears}"></figcaption>
+		</figure>
+		<p th:text="${review.crimes}">[Text]</p>
+		<p>Review of: <span th:text="${review.category}">category</span></p>
+		<p>Tags: <span th:text="${review.tagString}">tags</span></p>
+		<p><a th:href="|https://en.wikipedia.org/wiki/${review.wikiURL}|">More Information</a></p>
+		<p><a th:href="|https://en.wikipedia.org/wiki/${review.crimeOneURL}|">Reference (1)</a></p>
+		<p><a th:href="|https://en.wikipedia.org/wiki/${review.crimeTwoURL}|">Reference (2)</a></p>
+		<p><a th:href="|https://en.wikipedia.org/wiki/${review.crimeThreeURL}|">Reference (3)</a></p>
+	</main>
+</body>
+</html>

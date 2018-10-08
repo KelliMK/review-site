@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Presidents after the Geneva Convention</title>
+</head>
+<body>
+	<header>
+		<h1>Presidents after the Geneva Convention</h1>
+	</header>
+	<main>
+		<div th:each="review: ${reviews}">
+			<a th:href="|/reviews/${review.id}|" th:text="${review.presName}">presName</a>
+			<p>Category: <span th:text="${review.category}">Category</span></p>
+			<p>Years in office: <span th:text="${review.termYears}">termYears</span></p>
+		</div>
+	</main>
+</body>
+</html>
