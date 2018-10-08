@@ -13,7 +13,7 @@
 	<main>
 		<figure>
 			<img th:src="${review.imageURL}" style="width: auto; height: 1000px" th:alt="${review.presName}">
-			<figcaption th:text="review.termYears}"></figcaption>
+			<figcaption th:text="${review.termYears}"></figcaption>
 		</figure>
 		<p th:text="${review.crimes}">[Text]</p>
 		<p>Review of: <span th:text="${review.category}">category</span></p>

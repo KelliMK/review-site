@@ -58,7 +58,7 @@ public class ReviewRepository {
 	}
 
 	public void addReview(Review review) {
-		reviews.put(review.getID(), review);
+		reviews.put(review.getId(), review);
 	}
 
 	public Review getReview(long id) {

@@ -9,7 +9,7 @@ public class Review {
 	String category;				// Categories will be Presidents and Geneva Convention
 	String content;					// Content string
 	String tagString;				// Variable used to convert tags into strings
-	String imageURL;				// String for accessing image for page
+	String image;				// String for accessing image for page
 	String termYears;				// Years in office
 	String crimes;					// Ways in which this president violated the Geneva Conventions - description variable
 	String wikiURL;					// Wikipedia page for president
@@ -23,7 +23,7 @@ public class Review {
 		this.presName = presName;
 		this.category = category;
 		this.content = content;
-		this.imageURL = imageURL;
+		this.image = imageURL;
 		this.termYears = content.substring(0, 11);
 		this.crimes = content.substring(12);
 		this.wikiURL = "";
@@ -38,13 +38,14 @@ public class Review {
 		this.presName = presName;
 		this.category = category;
 		this.content = content;
-		this.imageURL = imageURL;
+		this.image = imageURL;
 		this.termYears = content.substring(0, 11);
 		this.crimes = content.substring(12);
 		this.wikiURL = wikiURL;
 		this.crimeOneURL = crimeOneURL;
 		this.crimeTwoURL = crimeTwoURL;
 		this.crimeThreeURL = crimeThreeURL;
+		this.tags = tags;
 	}
 	
 	@Override
@@ -59,7 +60,7 @@ public class Review {
 			return false;
 		}
 		Review other = (Review) obj;
-		if (this.id.equals(other.getID())) {
+		if (this.id.equals(other.getId())) {
 			return true;
 		} else {
 			return false;
@@ -90,12 +91,12 @@ public class Review {
 		return crimes;
 	}
 	
-	public Long getID() {
+	public Long getId() {
 		return id;
 	}
 	
 	public String getImageURL() {
-		return imageURL;
+		return image;
 	}
 	
 	public String getPresName() {
